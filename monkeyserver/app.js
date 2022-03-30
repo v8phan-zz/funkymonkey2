@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-//const path = require('path');
-const port = process.env.PORT || 3001;
-//const { nextTick } = require('process');
-//const pino = require('express-pino-logger')();
+// const path = require('path');
+// const port = process.env.PORT || 3001;
+// const { nextTick } = require('process');
+// const pino = require('express-pino-logger')();
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -12,6 +12,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const db = require('./config/database');
 const User = require("./models/User");
 const Comment = require("./models/Comment");
+
+// dockerizing settings
+require("dotenv").config();
+const corsOptions = {
+  origin: process.env.CLIENT_ORIGIN || "http://localhost:8081"
+};
+app.use(cors(corsOptions));
+
+const port = process.env.NODE_DOCKER_PORT || 8080;
 
 // test database
 // db.authenticate()
