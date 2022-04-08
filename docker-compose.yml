@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   mysqldb:
     image: mysql:5.7
@@ -31,7 +32,7 @@ services:
       - CLIENT_ORIGIN=$CLIENT_ORIGIN
     volumes: 
       - ./monkeyserver
-     networks:
+    networks:
       - backend
       - frontend
 

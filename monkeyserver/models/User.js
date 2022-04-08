@@ -2,7 +2,7 @@
 // const db = require('../config/database');
 
 const sequelize = require('database.js').sequelize;
-const DataTypes = require('mysql');
+const DataTypes1 = require('mysql');
 
 const User = sequelize.define('user'), {
   email: {
