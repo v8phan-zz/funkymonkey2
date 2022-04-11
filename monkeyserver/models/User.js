@@ -1,27 +1,27 @@
 // const Sequelize = require("sequelize");
 // const db = require('../config/database');
 
-const sequelize = require('database.js').sequelize;
-const DataTypes1 = require('mysql');
+//const sequelize = require('database.js').sequelize;
+//const DataTypes = require('mysql');
 
-const User = sequelize.define('user'), {
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  password: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-  testcolumn: {
-    type: DataTypes.INTEGER,
-  },
-}
+// const User = db.define('user'), {
+//   email: {
+//     type: DataTypes.STRING,
+//     allowNull: false,
+//   },
+//   password: {
+//     type: DataTypes.STRING,
+//     allowNull: false,
+//   },
+//   id: {
+//     type: DataTypes.INTEGER,
+//     autoIncrement: true,
+//     primaryKey: true,
+//   },
+//   testcolumn: {
+//     type: DataTypes.INTEGER,
+//   },
+// }
 
 // const User = db.define("user", {
 //   email: {
@@ -42,10 +42,10 @@ const User = sequelize.define('user'), {
 //   },
 // });
 
-User.associate = (models) => {
-  User.hasMany(models.Comments, {
-    foreignKey: 'comment_id',
-  });
-};
+// User.associate = (models) => {
+//   User.hasMany(models.Comments, {
+//     foreignKey: 'comment_id',
+//   });
+// };
 
-module.exports = User;
+// module.exports = User;

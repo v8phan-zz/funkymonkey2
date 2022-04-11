@@ -9,16 +9,16 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(pino);
 
-const db = require('./config/database');
-const User = require("./models/User");
-const Comment = require("./models/Comment");
+// const db = require('./config/database');
+// const User = require("./models/User");
+// const Comment = require("./models/Comment");
 
 // dockerizing settings
 require("dotenv").config();
-const corsOptions = {
-  origin: process.env.CLIENT_ORIGIN || "http://localhost:8081"
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: process.env.CLIENT_ORIGIN || "http://localhost:8081"
+// };
+// app.use(cors(corsOptions));
 
 const port = process.env.NODE_DOCKER_PORT || 8080;
 
@@ -42,7 +42,7 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
-app.use('/api', require('./routes/login'));
-app.use('/api', require('./routes/signup'));
-app.use('/api', require('./routes/postcomment'));
-app.use('/api', require('./routes/displaycomment'));
+// app.use('/api', require('./routes/login'));
+// app.use('/api', require('./routes/signup'));
+// app.use('/api', require('./routes/postcomment'));
+// app.use('/api', require('./routes/displaycomment'));

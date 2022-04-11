@@ -19,7 +19,7 @@ const About = () => {
   return (
     <Grid container className={classes.container}>
         <Grid item>
-      <div className={classes.paper}>Website created by Viet Phan with Node Express, React, and SQL</div>
+      <div className={classes.paper}>Website!! created by Viet Phan with Node Express, React, and SQL</div>
       <a className={classes.paper} href="https://github.com/v8phan">Visit my Github profile</a>
       </Grid>
     </Grid>

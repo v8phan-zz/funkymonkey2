@@ -31,7 +31,7 @@ services:
       - DB_PORT=$MYSQLDB_DOCKER_PORT
       - CLIENT_ORIGIN=$CLIENT_ORIGIN
     volumes: 
-      - ./monkeyserver
+      - ./monkeyserver:/monkeyserver
     networks:
       - backend
       - frontend

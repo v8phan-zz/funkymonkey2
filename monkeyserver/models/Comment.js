@@ -20,7 +20,7 @@ const Comment = db.define("comment", {
 
 Comment.associate = (models) => {
   Comment.belongsTo(models.User, {
-    foreignKey: "user_id",
+    foreignKey: 'user_id',
   });
 };
 
