@@ -32,6 +32,7 @@ services:
       - CLIENT_ORIGIN=$CLIENT_ORIGIN
     volumes: 
       - ./monkeyserver:/monkeyserver
+      - /monkeyserver/node_modules
     networks:
       - backend
       - frontend

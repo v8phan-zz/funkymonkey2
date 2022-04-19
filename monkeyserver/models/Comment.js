@@ -1,7 +1,8 @@
 const Sequelize = require("sequelize");
-const db = require("../config/database");
+const db = require("./index.js");
 
-const Comment = db.define("comment", {
+console.log(db.sequelize);
+const Comment = db.sequelize.define("comment", {
   comment: {
     type: Sequelize.STRING,
   },

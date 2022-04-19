@@ -1,8 +1,10 @@
 const express = require('express');
+
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const db = require('../config/database');
+const db = require('../models/index');
 const User = require('../models/User');
+
 const saltRounds = 10;
 
 router.post('/signup', async (req, res) => {
